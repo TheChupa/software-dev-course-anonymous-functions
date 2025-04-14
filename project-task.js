@@ -39,8 +39,7 @@ const todos = [
   3. Return only the tasks that are not completed.
   */
 
-
-  let incompleteTasks = todos.filter(task => !task.completed); // completed = false
+let incompleteTasks = todos.filter(task => !task.completed); // completed = false
 
 
 //console.log(incompleteTasks);
@@ -84,7 +83,9 @@ let allTasksCompleted = todos.map(task => ({ ...task, completed: true}));  // fo
   3. Use method chaining to perform both steps together.
   */
 
-let priorityToDo = todos.filter(task => !task.completed).sort((a, b) => a.priority - b.priority);
+let priorityToDo = todos
+  .filter(task => !task.completed)
+  .sort((a, b) => a.priority - b.priority);
 
 
 //console.log(priorityToDo);
