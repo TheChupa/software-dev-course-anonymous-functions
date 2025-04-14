@@ -38,8 +38,12 @@ const todos = [
   2. Use an anonymous function as the callback.
   3. Return only the tasks that are not completed.
   */
+
+
   let incompleteTasks = todos.filter(task => !task.completed); // completed = false
-  //console.log(incompleteTasks);
+
+
+//console.log(incompleteTasks);
   
   /*
   🔹 Task 2: Sort Tasks by Priority
@@ -50,8 +54,10 @@ const todos = [
   3. Sort tasks in ascending order of priority (1 = highest).
   */
   
-  let prioritySort = todos.sort((a, b) => a.priority - b.priority); // sort priority to highest
-  //console.log(prioritySort);
+let prioritySort = todos.sort((a, b) => a.priority - b.priority); // sort priority to highest
+ 
+
+//console.log(prioritySort);
   
   /*
   🔹 Task 3: Mark All Tasks as Completed
@@ -62,7 +68,11 @@ const todos = [
   3. Change the `completed` property to `true` for every task.
   */
   
+  // ...task applies all the OG properties to the array that you are modifying
+
 let allTasksCompleted = todos.map(task => ({ ...task, completed: true}));  // for every task, change completed to true
+
+
 //console.log(allTasksCompleted);
 
   /*
@@ -73,7 +83,10 @@ let allTasksCompleted = todos.map(task => ({ ...task, completed: true}));  // fo
   2. Then, sort the filtered results by priority using `sort()`.
   3. Use method chaining to perform both steps together.
   */
+
 let priorityToDo = todos.filter(task => !task.completed).sort((a, b) => a.priority - b.priority);
+
+
 //console.log(priorityToDo);
 
   
